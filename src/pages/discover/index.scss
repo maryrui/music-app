@@ -1,0 +1,31 @@
+.discoverBox{
+    margin-top:1rem;
+    .topTab{
+        display: flex;
+        padding:.3rem 0;
+        border-bottom:1px solid #f1f1f1;
+        p{
+            width:50%;
+            text-align: center;
+            a{
+                display: inline-block;
+                padding:.1rem;
+                border-radius:50%;
+                border:1px solid #ff5044;
+                margin-bottom:.2rem;
+                i{
+                    font-size:.6rem;
+                    color:#ff5044;
+                }
+            }
+        }
+    }
+    .musicListBox{
+        padding:.3rem .2rem;
+        h3{
+            font-weight:700;
+            margin-bottom:.3rem;
+        }
+    }
+
+}

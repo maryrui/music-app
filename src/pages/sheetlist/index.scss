@@ -1,0 +1,21 @@
+.sheetBox{
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    .sheetPlayListBox{
+        padding:.2rem;
+        li{
+            flex:0 0 50%;
+        }
+    }
+    .mm-content{
+        height:100%;
+        min-height: 0;
+        flex: 1 1;
+        overflow: hidden;
+        background-color: #f3f4f6;
+    }
+
+}
+

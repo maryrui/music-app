@@ -1,0 +1,18 @@
+.navBox{
+    height:1rem;
+    background-color:#ff5044;
+    display: flex;
+    align-items: center;
+    color:#fff;
+    padding-left:.2rem;
+
+    i{
+        position:relative;
+        z-index:1;
+        margin-right:.2rem;
+    }
+    p{
+        position:relative;
+        z-index:1;
+    }
+}

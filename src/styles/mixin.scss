@@ -1,0 +1,18 @@
+.img-blur{
+    transform: scale(1.5);
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter:blur(5px);
+    &:after{
+        content: " ";
+        height:100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: rgba(0,0,0,.25);
+    }
+}

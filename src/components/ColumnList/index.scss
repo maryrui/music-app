@@ -1,0 +1,35 @@
+.listBox{
+    font-size:.14rem;
+    display: flex;
+    flex-flow:wrap;
+    li{
+        flex:0 0 33.33%;
+        padding:.1rem .1rem .4rem .1rem;
+        box-sizing: border-box;
+        div{
+            position:relative;
+            width:100%;
+            font-size:.12rem;
+            color:#fff;
+            margin-bottom:.1rem;
+            img{
+                height:100%;
+                border-radius:5px;
+                object-fit: cover;
+            }
+            p{
+                position:absolute;
+                top:.1rem;
+                right:.1rem;
+                font-size:.12rem;
+            }
+        }
+        &>p{
+            height:.75rem;
+            line-height:.4rem;
+            overflow:hidden;
+            color:#666;
+        }
+    }
+
+}

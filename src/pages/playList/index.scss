@@ -1,0 +1,25 @@
+.minNav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:1rem;
+    overflow:hidden;
+    div{
+        width:100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index:1;
+        height:8rem;
+    }
+}
+.container{
+    .playListHeader{
+        overflow: hidden;
+        height:3.5rem;
+        div{
+            height:100%;
+        }
+    }
+}
