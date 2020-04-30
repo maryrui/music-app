@@ -36,6 +36,7 @@ export const formatPlayList =function(list){
         if(item.id){
             playList.push(createPlayList(item))
         }
+        return item.id
     })
     return playList
 }

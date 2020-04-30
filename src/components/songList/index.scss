@@ -1,0 +1,21 @@
+.song-wrapper{
+  background:#f1f1f1;
+  .songItem{
+      display: flex;
+      align-items: center;
+      &>span{
+          width:15%;
+          text-align: center;
+      }
+      &>div{
+          width:85%;
+          line-height:.5rem;
+          border-bottom:1px solid #ddd;
+          padding:0.2rem 0;
+          span{
+              font-size:.12rem;
+              color:#666;
+          }
+      }
+  }
+}

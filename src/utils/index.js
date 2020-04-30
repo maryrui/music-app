@@ -1,4 +1,4 @@
-export const playCount = item=>{
+export const formatPlayCount = item=>{
     return item/10000>9 ?
             item/1000>10000
             ?

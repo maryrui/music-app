@@ -45,11 +45,11 @@ class Discover extends Component{
                 </div>
                 <div className='topTab'>
                     <p>
-                        <a href="#"> <i className='iconfont'>&#xe636;</i> </a><br/>
+                        <a href="/#"> <i className='iconfont'>&#xe636;</i> </a><br/>
                         <span>歌单</span>
                     </p>
                     <p>
-                        <a href="#">
+                        <a href="/#">
                             <i className='iconfont'>&#xe6c5;</i>
                         </a> <br/>
                         <span>排行榜</span>

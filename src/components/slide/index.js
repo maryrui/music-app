@@ -115,7 +115,7 @@ class  Slide extends Component{
                <div className='slide-group' ref='slideGroup'>
                    {data.length &&
                         data.map((item,index)=>(
-                            <div className='slide-item' key={item.targetId}>
+                            <div className='slide-item' key={index+item.targetId}>
                                 <img src={item.imageUrl} alt=""/>
                             </div>)
                         )
