@@ -6,3 +6,19 @@ export const formatPlayCount = item=>{
             :`${Math.ceil(item/10000)}万`
         :Math.floor(item)
 }
+
+export const addZero=s=>{
+    return s >=10 ? s : '0'+s
+}
+
+export const formatTime = time=>{
+   let minute = Math.floor(time/60)
+    let second = Math.floor(time % 60)
+    return `${addZero(minute)}:${addZero(second)}`
+}
+
+export const findIndex = (list, music) => {
+    return list.findIndex(item => {
+        return item.id === music.id
+    })
+}

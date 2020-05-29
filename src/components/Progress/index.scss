@@ -1,0 +1,42 @@
+
+.progressBar-box{
+    height:2px;
+    //background:#fff;
+    background-color:hsla(0,0%,100%,.8);
+    position:relative;
+    .progress-bar{
+        position:absolute;
+        top:0;
+        left:0;
+        width:50%;
+        height:2px;
+        background-color:hsla(0,0%,100%,.15);
+        z-index:40;
+    }
+    .progress-outer{
+        position:absolute;
+        top:0;
+        left:0;
+        height:2px;
+        background:#ff5044;
+        z-index:60;
+        .progress-dot{
+            position:absolute;
+            padding:5px;
+            background:#fff;
+            border-radius:50%;
+            top:0;
+            right:0;
+            text-align: center;
+            transform: translate(100%,-50%);
+            span{
+                float:left;
+                width:5px;
+                height:5px;
+                background:#ff5044;
+                border-radius:50%;
+            }
+        }
+    }
+
+}

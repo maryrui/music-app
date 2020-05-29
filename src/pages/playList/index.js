@@ -1,6 +1,8 @@
 import React,{Component} from 'react'
-
+import {withRouter} from 'react-router-dom'
 import Nav from '../../components/Nav'
+import {setAllPlay} from "../../store/actions"
+import {connect} from 'react-redux'
 import { getPlaylistDetail } from '../../api'
 import { createPlayListDetail } from '../../model/index'
 import Scroll  from '../../components/Scroll'
@@ -22,13 +24,21 @@ class PlayList extends Component {
     componentDidMount() {
         this._getPlayDetail()
     }
+
+    itemClick=(id,index)=>{
+        this.props.setAllPlay ({
+            playList:this.state.data.tracks,
+            currentIndex:index
+        })
+    }
+
+
     _getPlayDetail(){
         getPlaylistDetail(this.props.match.params.id).then(res=>{
             if(res.data.code === 200){
                 this.setState({
                     data:createPlayListDetail(res.data.playlist)
                 })
-                console.log(this.state.data)
             }
         })
     }
@@ -65,7 +75,7 @@ class PlayList extends Component {
                             </div>
                         </div>
                         {tracks && tracks.length > 0 && (
-                        <SongList list={tracks}></SongList>
+                        <SongList list={tracks} itemClick={this.itemClick}></SongList>
                         )}
                     </div>
                 </Scroll>
@@ -74,4 +84,19 @@ class PlayList extends Component {
     }
 }
 
-export default PlayList
+const mapStateToProps = state =>({
+    showPlayer:state.showPlayer,
+    currentMusic:state.currentMusic
+})
+
+const mapDispatchToProps = dispatch => ({
+    setAllPlay:status=>{
+        dispatch(setAllPlay(status))
+    }
+})
+
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(withRouter(PlayList))

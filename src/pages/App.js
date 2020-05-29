@@ -1,9 +1,11 @@
 import React,{Component} from 'react'
 import { BrowserRouter as Router, Switch,Route,Redirect} from 'react-router-dom'
+import { connect } from 'react-redux'
 import Header from '../components/Header'
 import Discover from './discover'
 import SheetList from './sheetlist'
 import PlayList from './playList'
+import Player from "../components/Player";
 import '../styles/index.scss'
 /*import
 {
@@ -32,9 +34,18 @@ class App extends Component{
                        </Switch>
                    </div>
                </div>
+               {
+                   this.props.showPlayer &&  <Player />
+               }
+
            </Router>
         )
     }
 }
 
-export default App
+const mapStateToProps = state =>({
+    showPlayer:state.showPlayer
+
+})
+
+export default connect(mapStateToProps)(App)
